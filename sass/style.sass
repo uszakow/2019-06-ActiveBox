@@ -1,0 +1,215 @@
+@import var
+    
+body
+    font-family: 'Raleway', sans-serif
+    
+.wrap
+    @extend %wrap
+    margin: 0 auto
+.menu
+    @extend %menu
+    
+.logo
+    font-size: 32px
+    letter-spacing: .05em
+    color: white
+    text-decoration: none 
+    & :first-child        
+        font-weight: 900
+        opacity: .5
+.button
+    font-size: $px13
+    font-weight: 600
+    color: white
+    background-color: $red
+    border-radius: 2px
+    text-decoration: none
+    text-transform: uppercase
+.mediabutton
+    @extend %flexcenter
+    width: 37px
+    height: 37px
+    border-width: 1px
+    border-style: solid
+.media
+    display: flex
+    margin-bottom: 10px
+
+.pageheader
+    background-image: url(../img/header-bg.png)
+    background-size: cover
+    color: white
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 28px 0 32px
+        border-bottom: 1px solid rgba(255,255,255,0.5)
+        text-transform: uppercase  
+    &-menu    
+        width: 590/11.7*1%
+        font-size: $px13
+        font-weight: 700
+        opacity: .75
+        & a
+            color: inherit            
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+    &-main
+        padding: 5vw 9% 9vw
+        text-align: center
+        &-title
+            font-family: 'Open Sans', sans-serif
+            font-weight: 700
+            font-size: 65px
+            text-transform: uppercase
+            margin-bottom: 20px
+        &-text
+            font-size: $px22
+            line-height: 1.5em
+            margin: 0 auto 4.5vw
+    .button        
+        padding: 16px 50px
+
+.main-section1    
+    @extend %wrap
+    @extend %flexbetween
+    margin: 6.4vw auto 2.8vw
+    &-item
+        @extend %gridcol30
+        margin: 0 1.6%
+        text-align: center
+        &-img
+            height: 60px
+        &-title
+            font-size: $px14
+            font-weight: 700
+            text-transform: uppercase
+            margin-top: 26px
+        &-text
+            font-size: $px14
+            color: $grey
+            margin: 22px 0 3.6vw
+            line-height: 1.5em
+.main-section2
+    @extend %flexbetween
+    &-item
+        @extend %gridcol25
+        height: 350px
+        position: relative
+        display: flex
+        overflow: hidden
+        img
+            width: 100%
+            object-fit: cover
+        .curtain
+            @extend %flexcenter
+            position: absolute
+            top: -100%
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(232,69,69,.8)            
+            transform: translateY(0%)
+            transition: transform 1s ease-in        
+            a
+                color: white
+                text-align: center
+                text-decoration: none
+                padding: 5px
+                border: 1px solid transparent
+                &:hover
+                    border-color: white
+            &-title
+                text-transform: uppercase
+                font-weight: 700
+            &-explain
+                text-transform: capitalize
+        &:hover .curtain
+            transform: translateY(100%)
+            transition: transform 1s ease-out
+.main-section3
+    @extend %wrap
+    @extend %flexbetween
+    margin: 4.9vw auto 0
+    &-item
+        @extend %gridcol23
+        img
+            width: 100%
+        .name
+            font-size: $px22
+            text-transform: capitalize
+            margin-bottom: 12px
+        .position
+            font-size: $px13
+            color: $red
+            text-transform: uppercase
+            margin: 12px 0 22px
+        .item-text
+            font-size: $px14
+            color: $grey
+            line-height: 1.5em
+            margin-bottom: 1.3vw        
+        .mediabutton
+            margin-right: 3px
+            border-color: #E8ECEE
+.main-footer
+    @extend %flexcenter
+    margin: 6.1vw auto 5.1vw
+    &-title
+        font-size: 28px
+        text-transform: capitalize
+        margin-bottom: 14px
+        text-align: center
+    &-text
+        font-size: $px13
+        text-transform: uppercase
+        margin: 0 auto 1.9vw
+    .button        
+        padding: 16px 82px
+
+.pagefooter
+    @extend %flexcol
+    &-row1
+        background-color: #3A3E64
+        padding: 2.9vw 0 4.8vw
+        &-wrap
+            @extend %wrap
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            margin: 0 auto
+    &-row2
+        display: flex
+        justify-content: center
+        background-color: #313454
+        padding: 1.4vw 0
+        .copyright
+            font-size: $px14
+            color: #7C7C7E
+            text-align: center
+            margin: 1px auto 5px
+            .red
+                color: red
+            .white
+                color: white
+    .pagefooter-col
+        @extend %flexcol
+        @extend %gridcol29
+        align-items: center        
+        &-title
+            font-size: $px13
+            color: white
+            text-transform: uppercase
+        &-text
+            font-size: $px13
+            color: #8688A0
+            text-align: center
+            margin-top: 6px
+    .mediabutton
+        margin-top: 10px
+        margin-right: 7px
+        border-color: white
+
+@import media
